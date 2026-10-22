@@ -1,0 +1,18 @@
+# runtime output, never commit
+live.json
+working.json
+
+# python
+__pycache__/
+*.pyc
+
+# sing-box runtime
+proxy.log
+proxy.err.log
+proxy.out.log
+sing-box.path
+proxy-config.json
+
+# os
+Thumbs.db
+desktop.ini
