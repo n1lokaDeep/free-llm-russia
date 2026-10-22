@@ -1,12 +1,39 @@
 # free-llm-russia
 
-**Бесплатные LLM для России: что работает без VPN, что без карты, что без того и другого.**
+**Бесплатные LLM и нейросети для России: что работает без VPN, что без карты, что без того и другого.**
 
 Все существующие списки «free LLM APIs» написаны для Запада. В них не отмечено
 главное: **можно ли вообще достучаться до сервиса из РФ** и **примут ли российскую карту**.
 Этот список закрывает именно этот пробел.
 
 Проверено на живой машине в РФ, октябрь 2026.
+
+---
+
+## Кому это нужно
+
+Если вы искали что-то из этого — вы по адресу:
+
+- бесплатные нейросети с API без карты и без верификации
+- как получить API-ключ, если нет зарубежной карты
+- почему `403 Access denied by security policy` и что с этим делать
+- как обойти блокировку Cloudflare по IP
+- бесплатный доступ к ChatGPT, Claude, Gemini, DeepSeek, Qwen из России
+- API ChatGPT без VPN, Claude API без VPN, Gemini API без VPN
+- прокси для OpenRouter, OpenAI, Anthropic
+- настройка VLESS / Reality / sing-box / Xray
+- бесплатные LLM с бесплатным тарифом навсегда (free tier)
+- OpenAI-совместимые бесплатные эндпоинты
+- что делать, если WARP не работает
+- ошибки `ConnectFail`, `Authentication Fails`, `Not found for account`
+- как отличить блокировку по IP от неверного ключа
+- бесплатные API для программирования и агентов (Cursor, VS Code, OpenCode)
+
+**Ключевые слова:** бесплатные нейросети api, api без карты, нейросети без vpn,
+chatgpt без впн, claude api, gemini api, обход блокировки, cloudflare 403,
+access denied security policy, прокси для openai, vless конфиг, sing-box настройка,
+free llm api, free ai api, no credit card, no vpn, axios blocked, geoblock bypass,
+censorship circumvention, OpenAI-compatible free endpoint.
 
 ---
 

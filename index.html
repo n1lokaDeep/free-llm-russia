@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бесплатные LLM и нейросети из России — без VPN, без карты</title>
+
+<meta name="description" content="Какие бесплатные API нейросетей работают из России без VPN, без карты и без верификации. Обход Cloudflare 403 Access denied, прокси для OpenRouter, ChatGPT, Claude, Gemini, DeepSeek. Готовые скрипты.">
+<meta name="keywords" content="бесплатные нейросети api, api без карты, нейросети без vpn, chatgpt без впн, claude api, gemini api, обход блокировки, cloudflare 403, access denied security policy, прокси для openai, vless конфиг, sing-box, free llm api, free ai api, no credit card, openrouter, deepseek, groq, openai-compatible, censorship circumvention, russia">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Бесплатные LLM из России — без VPN и без карты">
+<meta property="og:description" content="Список бесплатных API нейросетей, доступных из РФ, плюс рабочие скрипты для обхода Cloudflare-блокировок.">
+<meta property="og:url" content="https://n1lokadeep.github.io/free-llm-russia/">
+
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d;
+    --text: #e6edf3; --dim: #8b949e; --accent: #58a6ff;
+    --ok: #3fb950; --warn: #d29922; --err: #f85149;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#fff; --panel:#f6f8fa; --border:#d0d7de; --text:#1f2328;
+            --dim:#656d76; --accent:#0969da; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px 80px; }
+  h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 1.3rem; margin: 40px 0 12px; padding-bottom: 6px;
+       border-bottom: 1px solid var(--border); }
+  .lead { color: var(--dim); font-size: 1.05rem; margin: 0 0 28px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: .93rem; }
+  th, td { text-align: left; padding: 9px 12px; border: 1px solid var(--border); }
+  th { background: var(--panel); font-weight: 600; }
+  tr:nth-child(even) td { background: color-mix(in srgb, var(--panel) 55%, transparent); }
+  code { background: var(--panel); border: 1px solid var(--border);
+         border-radius: 6px; padding: 2px 6px; font-size: .88em; }
+  pre { background: var(--panel); border: 1px solid var(--border);
+        border-radius: 8px; padding: 14px 16px; overflow-x: auto; }
+  pre code { background: none; border: none; padding: 0; }
+  .ok { color: var(--ok); font-weight: 600; }
+  .no { color: var(--err); font-weight: 600; }
+  .warn { color: var(--warn); font-weight: 600; }
+  .card { background: var(--panel); border: 1px solid var(--border);
+          border-radius: 10px; padding: 18px 20px; margin: 20px 0; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; margin: 26px 0 8px; }
+  .btn { background: var(--accent); color: #fff; padding: 10px 18px;
+         border-radius: 8px; font-weight: 600; }
+  .btn.alt { background: var(--panel); color: var(--text);
+             border: 1px solid var(--border); }
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border);
+           color: var(--dim); font-size: .9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Бесплатные LLM и нейросети из России</h1>
+<p class="lead">
+  Что работает <strong>без VPN</strong>, что <strong>без карты</strong>,
+  что <strong>без того и другого</strong>. Плюс готовые скрипты для обхода
+  Cloudflare-блокировок. Проверено на живой машине в РФ, октябрь 2026.
+</p>
+
+<div class="btns">
+  <a class="btn" href="https://github.com/n1lokaDeep/free-llm-russia">Открыть на GitHub</a>
+  <a class="btn alt" href="https://github.com/n1lokaDeep/free-llm-russia/blob/main/README.md">Полный список</a>
+</div>
+
+<h2>Три разные проблемы, которые постоянно путают</h2>
+<table>
+  <tr><th>Препятствие</th><th>Как выглядит</th><th>Чем лечится</th></tr>
+  <tr><td>Геоблокировка по IP</td>
+      <td><code>403 Access denied by security policy</code></td>
+      <td>прокси</td></tr>
+  <tr><td>Нужна зарубежная карта</td>
+      <td>регистрация не проходит</td>
+      <td>сервис без карты</td></tr>
+  <tr><td>Заблокирован сам сайт</td>
+      <td>страница не открывается</td>
+      <td>только для браузера</td></tr>
+</table>
+<p><strong>API и сайт блокируются по-разному.</strong>
+<code>openrouter.ai</code> может не открываться в браузере, но API работает
+с правильного IP — и наоборот.</p>
+
+<h2>Работает без VPN</h2>
+<table>
+  <tr><th>Сервис</th><th>Карта</th><th>Лимит</th><th>Модели</th></tr>
+  <tr><td><strong>Z AI (Zhipu)</strong></td><td>не нужна</td>
+      <td>1 запрос параллельно</td><td>GLM-4.7-Flash</td></tr>
+  <tr><td><strong>ModelScope</strong></td><td>нужна верификация</td>
+      <td>2000/день</td><td>Qwen3.5</td></tr>
+  <tr><td><strong>SiliconFlow</strong></td><td>нужна верификация</td>
+      <td>1000 RPM</td><td>Qwen3-8B</td></tr>
+  <tr><td><strong>Mistral</strong></td><td>не нужна</td>
+      <td>~$10/мес</td><td>Mistral Medium 3.5</td></tr>
+  <tr><td><strong>OVHcloud AI</strong></td>
+      <td class="ok">ключ не нужен</td>
+      <td>2 RPM</td><td>Qwen3.5-397B, gpt-oss-120b</td></tr>
+</table>
+
+<h2>Работает только через прокси</h2>
+<table>
+  <tr><th>Сервис</th><th>Карта</th><th>Лимит</th></tr>
+  <tr><td><strong>OpenRouter</strong></td><td>не нужна</td>
+      <td><strong>50/день на модель</strong></td></tr>
+  <tr><td><strong>Groq</strong></td><td>не нужна</td><td>30 RPM, 1000 RPD</td></tr>
+  <tr><td><strong>Cloudflare Workers AI</strong></td><td>не нужна</td>
+      <td>10 000 нейронов/день</td></tr>
+  <tr><td><strong>Google Gemini</strong></td><td>не нужна</td>
+      <td>15 RPM, 1500 RPD</td></tr>
+  <tr><td><strong>NVIDIA NIM</strong></td><td>регистрация</td>
+      <td>40 RPM, 10 000 RPD</td></tr>
+  <tr><td><strong>Kilo Code</strong></td>
+      <td class="ok">ключ не нужен</td><td>200/час</td></tr>
+  <tr><td><strong>LLM7.io</strong></td><td>не нужна</td>
+      <td>60 RPM, 250/час</td></tr>
+  <tr><td><strong>Ollama Cloud</strong></td><td>не нужна</td>
+      <td>не опубликованы</td></tr>
+</table>
+
+<h2>НЕ работает из РФ</h2>
+<table>
+  <tr><th>Сервис</th><th>Причина</th></tr>
+  <tr><td>ChatGPT / OpenAI API</td><td class="no">полная блокировка по региону</td></tr>
+  <tr><td>Claude / Anthropic API</td><td class="no">полная блокировка по региону</td></tr>
+  <tr><td>Cloudflare WARP</td>
+      <td class="no">эндпоинты <code>:894</code> заблокированы провайдером</td></tr>
+</table>
+
+<div class="card">
+  <strong>Почему WARP не помогает.</strong> Совет «поставь WARP» в РФ
+  не работает: <code>188.114.97.170:894</code> заблокирован,
+  <code>api.cloudflareclient.com</code> в таймауте. Регистрация не проходит,
+  и клиенты падают с <code>netip.ParsePrefix("/24")</code>.
+  Ирония: WARP выдаёт адрес Cloudflare, а блокирует вас тоже Cloudflare.
+</div>
+
+<h2>Как отличить блокировку от проблемы с ключом</h2>
+<pre><code>403 + Access denied by security policy  →  блок по IP, ключ ни при чём
+401 + Authentication Fails              →  ключ неверный или не от того сервиса
+404 + Not found for account             →  модель недоступна аккаунту
+429                                     →  лимит исчерпан</code></pre>
+<p>Проверка одной командой:</p>
+<pre><code>Invoke-RestMethod https://api.ipify.org</code></pre>
+<p><strong>Смена ключа при 403 не помогает.</strong> Проверено: два разных ключа
+дали одинаковый <code>403</code> с одного IP.</p>
+
+<h2>Готовые скрипты</h2>
+<table>
+  <tr><th>Файл</th><th>Назначение</th></tr>
+  <tr><td><code>check-configs.py</code></td>
+      <td>отобрать живые конфиги из публичного списка</td></tr>
+  <tr><td><code>verify-live.py</code></td>
+      <td>проверить реальным запросом, какие работают</td></tr>
+  <tr><td><code>start-proxy.ps1</code></td>
+      <td>поднять локальный прокси на 127.0.0.1:18888</td></tr>
+  <tr><td><code>proxy.ps1</code></td>
+      <td>управление: start / stop / restart / status</td></tr>
+</table>
+<p>Замер: <strong>из 5681 конфига живыми оказались 2.</strong>
+TCP-порт может быть открыт, а рукопожатие Reality — не проходить.
+Поэтому <code>verify-live.py</code> сравнивает выходной IP с вашим собственным:
+если совпали — трафик шёл напрямую, а не через прокси.</p>
+
+<h2>Ошибка, которую совершают все</h2>
+<pre><code># ТАК НЕ НАДО — сломает другие программы
+[Environment]::SetEnvironmentVariable('HTTPS_PROXY','http://127.0.0.1:18888','User')</code></pre>
+<p>Игры и лаунчеры начнут ходить через прокси и падать с <code>ConnectFail</code>.
+Задавайте прокси <strong>только внутри процесса</strong>:</p>
+<pre><code>$env:HTTPS_PROXY = 'http://127.0.0.1:18888'
+&amp; myapp.exe</code></pre>
+
+<footer>
+  <a href="https://github.com/n1lokaDeep/free-llm-russia">github.com/n1lokaDeep/free-llm-russia</a>
+  · MIT · проверено в РФ, октябрь 2026
+</footer>
+
+</div>
+</body>
+</html>
